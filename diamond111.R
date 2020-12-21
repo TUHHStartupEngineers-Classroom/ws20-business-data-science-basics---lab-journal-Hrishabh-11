@@ -15,3 +15,12 @@ diamonds4 %>% separate(col = 'dim', into = c('x', 'y', 'z'), sep = "[/]")
 diamonds5 <- readRDS("diamonds5.rds")
 diamonds5
 diamonds5 %>% unite(col = clarity, clarity_prefix:clarity_suffix, remove = T)
+
+diamonds %>% head(n=5)
+diamonds %>% arrange(cut, carat, desc(price))
+
+diamonds %>% select(color, -(clarity:table), price, x:z)
+
+diamonds %>% select(starts_with("c"))
+
+diamonds %>% transmute(cut, carat, p=x+y+z)%>%head(n=5)
