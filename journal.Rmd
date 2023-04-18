@@ -1,6 +1,12 @@
+tibble(
+  x = 1:50,
+  y = runif(50), 
+  z = x + y^2,
+  outcome = rnorm(50)
+)
 ---
 title: "Journal (reproducible report)"
-author: "Joschka Schwarz"
+author: "Hrishabh Shetty"
 date: "2020-11-05"
 output:
   html_document:
